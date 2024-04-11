@@ -17,8 +17,8 @@ describe 'Usuário visita tela inicial' do
     # Arrange
     # cadastrar 2 galpoes: Rio e Maceió
 
-    Warehouse.create(name: 'Rio', code:  'SDU', city: 'Rio de Janeiro', area:60_000)
-    Warehouse.create(name: 'Maceió', code:  'MCZ', city: 'Maceió', area:50_000)
+    Warehouse.create(name: 'Rio', code:  'SDU', city: 'Rio de Janeiro', area:60_000, address: "endereço", cep: "cep", description: "descrição")
+    Warehouse.create(name: 'Maceió', code:  'MCZ', city: 'Maceió', area:50_000, address: "endereço", cep: "cep", description: "descrição")
 
     # Act
     visit root_path
