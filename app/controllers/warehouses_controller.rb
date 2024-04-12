@@ -1,6 +1,7 @@
 class WarehousesController < ApplicationController
   def show
-    @warehouse = Warehouse.find(params[:id])
+    id = params[:id]
+    @warehouse = Warehouse.find(id)
   end
 
   def new
@@ -15,6 +16,23 @@ class WarehousesController < ApplicationController
     else
       flash.now[:notice] = "Galpão não cadastrado!"
       render 'new'
+    end
+  end
+
+  def edit
+    id = params[:id]
+    @warehouse = Warehouse.find(id)
+  end
+
+  def update
+    id = params[:id]
+    @warehouse = Warehouse.find(id)
+    warehouse_params = params.require(:warehouse).permit(:name, :code, :city, :area, :address, :cep, :description)
+    if @warehouse.update(warehouse_params)
+      redirect_to warehouse_path(id), notice: "Galpão atualizado com sucesso!"
+    else
+      flash.now[:notice] = "Não foi possível atualizar o galpão!"
+      render 'edit'
     end
   end
 end

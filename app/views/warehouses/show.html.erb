@@ -7,4 +7,5 @@
   <strong>Endereço:</strong> <%= @warehouse.address %> - <strong>CEP:  </strong><%= @warehouse.cep %><br>
 </div>
 
+<%= link_to "Editar", edit_warehouse_path(@warehouse) %>
 <%= link_to "Voltar", root_path %>

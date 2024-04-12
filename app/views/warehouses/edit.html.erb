@@ -1,20 +1,6 @@
-<h1>Novo Galpão:</h1>
+<h1>Editar Galpão</h1>
 
-<% if (@new_warehouse.errors.any?) %>
-<p>Verifique os erros abaixo:</p>
-<ul>
-
-  <% @new_warehouse.errors.full_messages.each do |msg| %>
-  <li>
-    <%= msg %>
-  </li>
-
-  <% end %>
-
-</ul>
-<% end %>
-
-<%= form_with model: @new_warehouse do |f|%>
+<%= form_with model: @warehouse do |f|%>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
