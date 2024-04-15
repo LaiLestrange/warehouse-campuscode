@@ -6,7 +6,7 @@ describe 'Usuário remove um galpão' do
     Warehouse.create!(name: 'Aero SSA', code:  'EVA', city: 'Salvador', area:210_000,
     address: 'Estrada Velha do Aeroporto, 5', cep: '17000-000',
     description: 'Galpão da última astronave')
-    
+
     #Act
     visit root_path
     click_on 'Aero SSA'
@@ -22,12 +22,12 @@ describe 'Usuário remove um galpão' do
 
   it 'e não apaga outros galpões' do
     #Arrange
-    first_warehouse = Warehouse.create!(name: 'Aero SSA', code:  'EVA', city: 'Salvador', area:210_000,
+    Warehouse.create!(name: 'Aero SSA', code:  'EVA', city: 'Salvador', area:210_000,
     address: 'Estrada Velha do Aeroporto, 5', cep: '17000-000',
-    description: 'Galpão da última astronave')
-    second_warehouse = Warehouse.create!(name: 'Aero VCA', code:  'VDC', city: 'Vitória da Conquista', area:217_000,
+    description: 'Galpão da última astronave') #w1
+    Warehouse.create!(name: 'Aero VCA', code:  'VDC', city: 'Vitória da Conquista', area:217_000,
     address: 'Estrada da Suiça Baiana, 77', cep: '77000-000',
-    description: 'Galpão da boca do inferno')
+    description: 'Galpão da boca do inferno') #w2
 
 
     #Act

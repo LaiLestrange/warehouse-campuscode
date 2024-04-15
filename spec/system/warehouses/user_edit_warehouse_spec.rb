@@ -63,13 +63,13 @@ describe 'Usuário edita um galpão' do
       visit root_path
       click_on 'Aeroporto SP'
       click_on 'Editar'
-      fill_in'Nome', with: ''
-      fill_in'Descrição', with: ''
-      fill_in'Código', with: ''
-      fill_in'Endereço', with: ''
-      fill_in'Cidade', with: ''
-      fill_in'CEP', with: ''
-      fill_in'Área', with: ''
+      fill_in 'Nome', with: ''
+      fill_in 'Descrição', with: ''
+      fill_in 'Código', with: ''
+      fill_in 'Endereço', with: ''
+      fill_in 'Cidade', with: ''
+      fill_in 'CEP', with: ''
+      fill_in 'Área', with: ''
       click_on 'Atualizar Galpão'
 
       #Assert
