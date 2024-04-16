@@ -56,8 +56,8 @@ describe 'Usuário edita um galpão' do
     it 'e mantém os campos obrigatórios' do
       #Arrange
       Warehouse.create!(name: 'Aeroporto SP', code:  'SP1', city: 'Gaurulhos', area:100_000,
-      address: 'Avenida do Aeroporto, 1000', cep: '15000-000',
-      description: 'Galpão destinado para cargas internacionais')
+                        address: 'Avenida do Aeroporto, 1000', cep: '15000-000',
+                        description: 'Galpão destinado para cargas internacionais')
 
       #Act
       visit root_path

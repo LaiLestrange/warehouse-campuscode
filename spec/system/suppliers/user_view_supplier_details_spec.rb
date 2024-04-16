@@ -45,6 +45,6 @@ describe 'Usuário vê os detalhes de um fornecedor' do
     click_on 'Voltar'
 
     #assert
-    expect(current_path).to eq root_path
+    expect(current_path).to eq suppliers_path
   end
 end
