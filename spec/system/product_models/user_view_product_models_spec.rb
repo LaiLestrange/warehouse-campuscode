@@ -1,9 +1,21 @@
 require 'rails_helper'
 
-
 describe "Usuário vê o modelos de produtos" do
+
+    it 'se estiver autenticado' do
+      #Arrange
+      #Act
+      visit root_path
+      within('nav') do
+        click_on 'Modelos de Produtos'
+      end
+      #Assert
+      expect(current_path).to eq new_user_session_path
+    end
     it "a partir do menu" do
       #Arrange
+      user = User.create!(email: 'email@defulano.com', password: 'password')
+      login(user)
       #Act
       visit root_path
       within('nav') do
@@ -15,6 +27,8 @@ describe "Usuário vê o modelos de produtos" do
 
     it 'com sucesso' do
       #Arrange
+      user = User.create!(email: 'email@defulano.com', password: 'password')
+      login(user)
         #criar modelos de produtos
       supplier_x = Supplier.create!(
         corporate_name: 'Nome Empresa 1 Oficial LTDA',
@@ -61,6 +75,8 @@ describe "Usuário vê o modelos de produtos" do
 
     it 'e não existem produtos cadastrados ' do
       #Arrange
+      user = User.create!(email: 'email@defulano.com', password: 'password')
+      login(user)
       #Act
       visit root_path
       within('nav') do
