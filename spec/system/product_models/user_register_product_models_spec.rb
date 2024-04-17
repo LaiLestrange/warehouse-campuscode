@@ -3,9 +3,8 @@ require 'rails_helper'
 describe "Usuário cadastra um modelo de produto" do
   it "com sucesso" do
     #Arrange
-    user = User.create!(email: 'email@defulano.com', password: 'password')
-    login(user)
-    
+    user = User.create!(name: "Fulane", email: "fu@lane.com", password: "pass1w0rd")
+    login_as(user)
     first_supplier = Supplier.create!(
       corporate_name: 'Nome Empresa 1 Oficial LTDA',
       brand_name: 'Empresa 1',
@@ -51,10 +50,8 @@ describe "Usuário cadastra um modelo de produto" do
 
   it 'deve preencher todos os campos' do
     #Arrange
-
-    user = User.create!(email: 'email@defulano.com', password: 'password')
-    login(user)
-
+    user = User.create!(name: "Fulane", email: "fu@lane.com", password: "pass1w0rd")
+    login_as(user)
     Supplier.create!(
       corporate_name: 'Nome Empresa 1 Oficial LTDA',
       brand_name: 'Empresa 1',
