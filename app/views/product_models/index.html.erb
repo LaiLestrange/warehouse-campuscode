@@ -1,5 +1,7 @@
 <h1>Modelos de Produtos</h1>
 
+<%= link_to 'Cadastrar Novo', new_product_model_path %>
+
 <% if @product_models.any? %>
   <% @product_models.each do |pm| %>
     <div>
@@ -12,7 +14,7 @@
       </dl>
     </div>
   <% end %>
- <% else %>
-      <p>Não existem modelos de produtos cadastrados!</p>
+<% else %>
+  <p>Não existem modelos de produtos cadastrados!</p>
 <% end %>
 

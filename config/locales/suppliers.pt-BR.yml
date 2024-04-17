@@ -1,17 +1,8 @@
 pt-BR:
  activerecord:
     models:
-      warehouse: 'Galpão'
       supplier: 'Fornecedor'
     attributes:
-      warehouse:
-        name: 'Nome'
-        code: 'Código'
-        city: 'Cidade'
-        area: 'Área'
-        address: 'Endereço'
-        cep: 'CEP'
-        description: 'Descrição'
       supplier:
         corporate_name: 'Nome da Empresa'
         brand_name: 'Nome Fantasia'
