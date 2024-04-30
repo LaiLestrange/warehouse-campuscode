@@ -19,7 +19,13 @@
         <%= link_to 'Modelos de Produtos', product_models_path %>
         <%= link_to 'Registrar Pedido', new_order_path %>
 
+
         <% if user_signed_in? %>
+          <%= form_with url: search_orders_path, method: :get do |f|%>
+            <%= f.label :query, 'Buscar Pedido' %>
+            <%= f.text_field :query %>
+            <%= f.submit 'Buscar' %>
+          <% end %>
           Olá, <%= current_user.name %>!
           <%= current_user.description %>
           <%= button_to 'Sair', destroy_user_session_path, method: :delete %>

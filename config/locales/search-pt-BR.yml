@@ -1,0 +1,9 @@
+pt-BR:
+ activerecord:
+    models:
+      order:
+        one: 'Pedido'
+        other: 'Pedidos'
+ found:
+  one: 'encontrado'
+  other: 'encontrados'

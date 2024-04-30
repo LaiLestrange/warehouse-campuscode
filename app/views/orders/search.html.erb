@@ -1,0 +1,22 @@
+<h1>Resultados da Busca por: <%= @code %></h1>
+
+
+<% if @orders.present? %>
+  <p><%= @orders.count %> <%= Order.model_name.human(count: @orders.count).downcase %> <%= t(:found, count: @orders.count) %></p>
+  <dl>
+    <% @orders.each do |order| %>
+      <dt>Código:</dt>
+      <dd><%= order.code %></dd>
+      <dt>Galpão Destino:</dt>
+      <dd><%= order.warehouse.full_description %></dd>
+      <dt>Fornecedor:</dt>
+      <dd><%= order.supplier.corporate_name %></dd>
+      <dt>Usuário Responsável:</dt>
+      <dd><%= order.user.description %></dd>
+      <dt>Data Prevista de Entrega:</dt>
+      <dd><%= I18n.localize order.estimated_delivery_date %></dd>
+    <% end %>
+</dl>
+<%# else %>
+<% end %>
+
