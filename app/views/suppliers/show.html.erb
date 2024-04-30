@@ -1,8 +1,8 @@
-<h2>Fornecedor: <%= @supplier.brand_name %></h2>
+<h2><%= Supplier.model_name.human %>: <%= @supplier.brand_name %></h2>
 <%= @supplier.corporate_name %>
 
 <div>
-  <strong>CNPJ: </strong> <%= @supplier.registration_number %><br>
+  <strong><%= Supplier.human_attribute_name(:registration_number) %>: </strong> <%= @supplier.registration_number %><br>
   <strong>Endereço: </strong><%= @supplier.full_address %><br>
   <strong>Cidade: </strong><%= @supplier.city %> - <%= @supplier.state %><br>
   <strong>Email: </strong><%= @supplier.email %>

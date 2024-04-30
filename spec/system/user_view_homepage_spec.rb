@@ -3,14 +3,13 @@ require 'rails_helper'
 describe 'Usuário visita tela inicial' do
   it 'e vê o nome da app' do
     # Arrange
-      #pré-requisitos para a aplicação
-      #o que nesse caso não é necessário
 
     # Act
     visit root_path
 
     # Assert
-    expect(page).to have_content('Galpões & Estoque')
+    expect(page).to have_content 'Galpões & Estoque'
+    expect(page).to have_link'Galpões & Estoque', href: root_path
   end
 
   it 'e vê os galpões cadastrados' do

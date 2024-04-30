@@ -43,18 +43,21 @@ describe "Usuário cadastra um pedido" do
                                   address: 'Avenida do Aeroporto, 1000',
                                   cep: '15000-000',
                                   description: 'Galpão destinado para cargas internacionais')
+    allow(SecureRandom).to receive(:alphanumeric).with(8).and_return('ABCD1234')
+
     #act
     login_as user
     visit root_path
     click_on 'Registrar Pedido'
-    select warehouse.name, from: 'Galpão'
+    select warehouse.full_description, from: 'Galpão'
     select supplier.corporate_name, from: 'Fornecedor'
     fill_in 'Data Prevista de Entrega', with: '28/05/2024'
     click_on 'Gravar'
 
-    #assert
+    #asser
     expect(page).to have_content 'Pedido registrado com suceso.'
-    expect(page).to have_content 'Galpão Destino: Aeroporto SP'
+    expect(page).to have_content 'Pedido ABCD1234'
+    expect(page).to have_content 'Galpão Destino: GRU - Aeroporto SP'
     expect(page).to have_content 'Fornecedor: Empresa X nome oficial registrado'
     expect(page).to have_content 'Usuário Responsável: Cliente - email@cliente.com'
     expect(page).to have_content 'Data Prevista de Entrega: 28/05/2024'
