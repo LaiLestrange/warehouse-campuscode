@@ -1,5 +1,4 @@
-<h1>Resultados da Busca por: <%= @code %></h1>
-
+<h1>Meus Pedidos</h1>
 
 <% if @orders.present? %>
   <p><%= @orders.count %> <%= Order.model_name.human(count: @orders.count).downcase %> <%= t(:found, count: @orders.count) %></p>
@@ -8,4 +7,3 @@
   <% end %>
 <%# else %>
 <% end %>
-

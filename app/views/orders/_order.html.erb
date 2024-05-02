@@ -1,0 +1,12 @@
+<dl>
+  <dt>Código:</dt>
+  <dd><%= order.code %></dd>
+  <dt>Galpão Destino:</dt>
+  <dd><%= order.warehouse.full_description %></dd>
+  <dt>Fornecedor:</dt>
+  <dd><%= order.supplier.corporate_name %></dd>
+  <dt>Usuário Responsável:</dt>
+  <dd><%= order.user.description %></dd>
+  <dt>Data Prevista de Entrega:</dt>
+  <dd><%= I18n.localize order.estimated_delivery_date %></dd>
+</dl>
