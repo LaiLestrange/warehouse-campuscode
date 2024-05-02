@@ -132,7 +132,7 @@ describe "Usuário vê seus próprios pedidos" do
        #Assert
        expect(current_path).not_to eq order_path(first_order.id)
        expect(current_path).to eq root_path
-       expect(page).to have_content 'Você não possui acesso a este pedido.'
+       expect(page).to have_content "Você não tem permissão para acessar essa página!"
   end
 
 end
