@@ -33,7 +33,7 @@
     },
     {
         "type": "Group",
-        "name": "others",
+        "name": "languages",
         "parent_id": "8Fud3Vm6S0bseLtv",
         "workspaceRoot": null,
         "workspacePath": null,
@@ -78,5 +78,13 @@
         "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
         "workspacePath": "app/views",
         "id": "vjonSM7h45JkxCIW"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/nineball/rails-campuscode/warehouse-app/config/locales",
+        "parent_id": "uodySAK1M24YUBRb",
+        "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
+        "workspacePath": "config/locales",
+        "id": "n3GP1OJVFml7Ew5j"
     }
 ]

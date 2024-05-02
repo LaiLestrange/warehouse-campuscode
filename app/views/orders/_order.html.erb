@@ -9,4 +9,6 @@
   <dd><%= order.user.description %></dd>
   <dt>Data Prevista de Entrega:</dt>
   <dd><%= I18n.localize order.estimated_delivery_date %></dd>
+  <dt><%= Order.human_attribute_name(:status) %></dt>
+  <dd><%= t(order.status) %></dd>
 </dl>

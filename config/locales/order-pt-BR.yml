@@ -1,0 +1,13 @@
+pt-BR:
+ pending: 'Pendente'
+ delivered: 'Entregue'
+ canceled: 'Cancelado'
+ activerecord:
+    models:
+      order:
+        one: 'Pedido'
+        other: 'Pedidos'
+    attributes:
+      order:
+        name: 'Nome'
+        status: 'Situação do Pedido'

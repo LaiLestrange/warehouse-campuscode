@@ -61,6 +61,7 @@ describe "Usuário cadastra um pedido" do
     expect(page).to have_content 'Fornecedor: Empresa X nome oficial registrado'
     expect(page).to have_content 'Usuário Responsável: Cliente - email@cliente.com'
     expect(page).to have_content 'Data Prevista de Entrega: 28/05/2024'
+    expect(page).to have_content 'Situação do Pedido: Pendente'
     expect(page).not_to have_content 'Aero Porto'
     expect(page).not_to have_content 'Fantasia EMPRESA Y'
   end

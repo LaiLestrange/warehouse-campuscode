@@ -9,6 +9,11 @@
   <dd><%= @order.user.description %></dd>
   <dt>Data Prevista de Entrega:</dt>
   <dd><%= I18n.localize @order.estimated_delivery_date %></dd>
+  <dt><%= Order.human_attribute_name(:status) %>:</dt>
+  <dd><%= t(@order.status) %></dd>
 </dl>
+
+<%= button_to 'Marcar como ENTREGUE', delivered_order_path(@order) %>
+<%= button_to 'Marcar como CANCELADO', canceled_order_path(@order) %>
 
 <%= link_to 'Editar', edit_order_path(@order) %>

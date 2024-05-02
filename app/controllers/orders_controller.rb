@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :check_user, only: [:show, :edit, :update]
+  before_action :check_user, only: [:show, :edit, :update, :delivered, :canceled]
 
   def new
     @order = Order.new
@@ -37,6 +37,16 @@ class OrdersController < ApplicationController
 
     @order.update(order_params)
     redirect_to @order, notice: 'Pedido atualizado com sucesso!'
+  end
+
+  def delivered
+    @order.delivered!
+    redirect_to @order, notice: "Pedido Entregue!"
+  end
+
+  def canceled
+    @order.canceled!
+    redirect_to @order, notice: "Pedido Cancelado!"
   end
 
   private
