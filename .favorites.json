@@ -1,0 +1,82 @@
+[
+    {
+        "type": "Group",
+        "name": "ruby",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "8Fud3Vm6S0bseLtv"
+    },
+    {
+        "type": "Group",
+        "name": "app",
+        "parent_id": "8Fud3Vm6S0bseLtv",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "VpUgMTGtnJrPIWFN"
+    },
+    {
+        "type": "Group",
+        "name": "tests",
+        "parent_id": "8Fud3Vm6S0bseLtv",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "6BOsutmTq2kMIWPr"
+    },
+    {
+        "type": "Group",
+        "name": "db",
+        "parent_id": "8Fud3Vm6S0bseLtv",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "WNh5eRvpuA3xja98"
+    },
+    {
+        "type": "Group",
+        "name": "others",
+        "parent_id": "8Fud3Vm6S0bseLtv",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "uodySAK1M24YUBRb"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/nineball/rails-campuscode/warehouse-app/spec",
+        "parent_id": "6BOsutmTq2kMIWPr",
+        "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
+        "workspacePath": "spec",
+        "id": "8p6HJxaOYPhnLuUB"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/nineball/rails-campuscode/warehouse-app/db",
+        "parent_id": "WNh5eRvpuA3xja98",
+        "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
+        "workspacePath": "db",
+        "id": "uzWlOQerKVmIUMxY"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/nineball/rails-campuscode/warehouse-app/app/controllers",
+        "parent_id": "VpUgMTGtnJrPIWFN",
+        "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
+        "workspacePath": "app/controllers",
+        "id": "5qEsvjdW4xgfeLkD"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/nineball/rails-campuscode/warehouse-app/app/models",
+        "parent_id": "VpUgMTGtnJrPIWFN",
+        "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
+        "workspacePath": "app/models",
+        "id": "AIH17UsP56uSgGfh"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/nineball/rails-campuscode/warehouse-app/app/views",
+        "parent_id": "VpUgMTGtnJrPIWFN",
+        "workspaceRoot": "/home/nineball/rails-campuscode/warehouse-app",
+        "workspacePath": "app/views",
+        "id": "vjonSM7h45JkxCIW"
+    }
+]

@@ -1,4 +1,5 @@
-<h1>Pedido <%= @order.code %></h1>
+<h1>Detalhes do Pedido</h1>
+<h2>Pedido <%= @order.code %></h2>
 <dl>
   <dt>Galpão Destino:</dt>
   <dd><%= @order.warehouse.full_description %></dd>
@@ -9,3 +10,5 @@
   <dt>Data Prevista de Entrega:</dt>
   <dd><%= I18n.localize @order.estimated_delivery_date %></dd>
 </dl>
+
+<%= link_to 'Editar', edit_order_path(@order) %>

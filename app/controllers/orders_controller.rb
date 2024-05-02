@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_user, only: [:show, :edit, :update]
 
   def new
     @order = Order.new
@@ -15,9 +16,7 @@ class OrdersController < ApplicationController
     redirect_to @order, notice: 'Pedido registrado com suceso.'
   end
 
-  def show
-    @order = Order.find(params[:id])
-  end
+  def show ; end
 
   def index
     @orders = current_user.orders
@@ -28,4 +27,23 @@ class OrdersController < ApplicationController
     @orders = Order.where("code LIKE ?", "%#{@code}%")
   end
 
+  def edit
+    @warehouses = Warehouse.all
+    @suppliers = Supplier.all
+  end
+
+  def update
+    order_params = params.require(:order).permit(:warehouse_id, :supplier_id, :estimated_delivery_date)
+
+    @order.update(order_params)
+    redirect_to @order, notice: 'Pedido atualizado com sucesso!'
+  end
+
+  private
+  def check_user
+    @order = Order.find(params[:id])
+    if @order.user != current_user
+      return redirect_to root_path, notice: "Você não tem permissão para acessar essa página!"
+    end
+  end
 end
